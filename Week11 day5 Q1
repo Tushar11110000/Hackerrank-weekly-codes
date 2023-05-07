@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution 
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        if (num>7)
+        {
+            return;
+        }
+        else
+        {
+            int sum=0;
+            int arr[] = new int[num];
+            for (int i=0; i<num;i++)
+            {
+                arr[i] = scan.nextInt();
+            }
+            for (int i=0; i<num;i++)
+            {
+                sum = sum+arr[i];
+            }
+            int percentage = sum/num;
+            if (percentage >= 90)
+            {
+                System.out.println("A+");
+            }
+            else if (percentage >=70 && percentage<=89)
+            {
+                System.out.println("A");
+            }
+             else if (percentage >=60 && percentage<=69)
+            {
+                System.out.println("B");
+            }
+              else if (percentage >=50 && percentage<=59)
+            {
+                System.out.println("C");
+            }
+              else
+            {
+                System.out.println("D");
+            }
+        }
+    }
+}
