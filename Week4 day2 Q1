@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();    
+        if (size < 0) {
+            System.out.println("Invalid Array Size");
+            return;
+        }
+        double[] Arr = new double[size];
+        int[] intArr= new int[size];
+        for (int i = 0; i < size; i++) {
+            Arr[i] = sc.nextDouble();
+            if (Arr[i] < 0) {
+                System.out.println("Invalid Array Elements");
+                return;
+            }
+            intArr[i] = (int)Arr[i];
+        }
+        for (int i = 0; i < size; i++) {
+            System.out.println(intArr[i] + " ");
+        }
+    }
+}
