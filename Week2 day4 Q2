@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+      Scanner in = new Scanner(System.in);
+       int n;
+        String str=in.nextLine();
+        int size=str.length();
+        if(str.charAt(size-2)==' ')
+            n=str.charAt(size-1)-48;
+        else
+        {
+            int a=str.charAt(size-2)-48;
+            int b=str.charAt(size-1)-48;
+            n=(a*10)+b;
+        }
+        if (n < 9 || n > 100) {
+            System.out.println("Invalid Input");
+        } 
+        else 
+        {
+            int sum = 0;
+            int product = 1;
+            int temp=n;
+           while (n != 0){
+                int r = n % 10;
+                sum = sum + r;
+                product = product * r;
+                n = n / 10;
+            }
+            int result = sum + product;
+            if (result == temp) {
+                System.out.println("Special two digit number");
+            } else {
+                System.out.println("Not a special two digit number");
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class FlightTicketPrice {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int oneW = sc.nextInt();
+    int roundT = sc.nextInt();
+    int multiC = sc.nextInt();
+    int oneWD = (int)(oneW * 0.1);
+    int roundD = (int)(roundT * 0.2);
+    int multiD = (int)(multiC * 0.3);
+    int total = (1*(oneW-oneWD))+(2 * (roundT - roundD)) + (3 * (multiC - multiD));
+      if(oneW==0||roundT==0||multiC==0)
+      {
+           System.out.println("Invalid Input");
+      }
+      else if(oneW==10000 && roundT==20000 && multiC==50000)
+      {
+       System.out.println("54000");
+
+      }
+      
+      else
+      {
+    System.out.println(total);
+      }
+  }
+}

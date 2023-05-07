@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class TemperatureConversion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice = sc.nextInt();
+        double temperature = sc.nextDouble();
+        double convertedTemp = 0;
+
+        if (choice == 1) {
+            convertedTemp = (temperature - 32) * 5 / 9;
+            System.out.printf("%.2f", convertedTemp);
+        } else if (choice == 2) {
+            convertedTemp = (temperature * 9 / 5) + 32;
+            System.out.printf("%.1f", convertedTemp);
+        } else {
+            System.out.println("INVALID CHOICE");
+        }
+    }
+}
