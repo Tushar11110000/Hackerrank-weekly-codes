@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if (a >= 10 && a <= 1000 && b >= 10 && b <= 1000) {
+            boolean result = isBigger(a, b);
+            System.out.println(result);
+        } else {
+            System.out.println("Invalid Input");
+        }
+    }
+    public static boolean isBigger(int a, int b) {
+        if (a > b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
